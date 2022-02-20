@@ -15,5 +15,13 @@ const SidesTriangle NumberOfSides = 3
 const SidesSquare NumberOfSides = 4
 
 func CalcSquare(sideLen float64, sidesNum NumberOfSides) float64 {
-	return math.Pi
+	switch sidesNum {
+	case 0:
+		return math.Pi * sideLen * sideLen
+	case 3:
+		return (math.Sqrt(3) * sideLen * sideLen) / 4
+	case 4:
+		return sideLen * sideLen
+	}
+	return 0
 }
